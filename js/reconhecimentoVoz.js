@@ -3,12 +3,12 @@ const elementoChute = document.getElementById('chute') //pega o id do chute
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition; 
 
 //funcoes para o funcionamento da API
-const recognition = new SpeechRecognition(); 
-recognition.lang = 'pt-Br' 
+const recognition = new SpeechRecognition();
+recognition.lang = 'pt-Br'
 recognition.start()
 
 //add o evento de "ouvir" da API
-recognition.addEventListener('resilt', onSpeak)
+recognition.addEventListener('result', onSpeak)
 //add o evento para quando ele "acabar" de "ouvir" recomece a "ouvir"
 recognition.addEventListener('end', () => recognition.start()) //
 
