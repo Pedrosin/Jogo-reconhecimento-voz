@@ -2,11 +2,11 @@ function verificaChute(chute) {
     const num = +chute
 
     if (chuteInvalido(num)) { // if para construir o html na tela se o valor nao for numerico
-        elementoChute.innerHTML += `<div>Valor Inválido</div>`
+        elementoChute.innerHTML += '<div>Valor Inválido</div>'
         return
     }
 
-    if (numForMaior) {// if para construir o html na tela se for maior ou menor
+    if (numForMaior(num)) {// if para construir o html na tela se for maior ou menor
         elementoChute.innerHTML += `<div>Valor inválido: o numero secreto precisa estar entre ${menorValor} e ${maiorValor}</div>`
         return
     }
