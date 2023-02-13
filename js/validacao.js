@@ -2,13 +2,13 @@ function verificaChute(chute) {
     const num = +chute
 
     if (chuteInvalido(num)) { // if para construir o html na tela se o valor nao for numerico
-        elementoChute.innerHTML += '<div>Valor Inválido</div>'
-        return;
+        elementoChute.innerHTML += `<div>Valor Inválido</div>`
+        return
     }
 
     if (numForMaior) {// if para construir o html na tela se for maior ou menor
-        elementoChute.innerHTML += '<div>Valor inválido: o numero secreto precisa estar entre ${menorValor} e ${maiorValor}</div>'
-        return;
+        elementoChute.innerHTML += `<div>Valor inválido: o numero secreto precisa estar entre ${menorValor} e ${maiorValor}</div>`
+        return
     }
 
     if (num === numeroSecreto) { // if para verificar se o numero que foi dito é o num secreto
@@ -21,11 +21,11 @@ function verificaChute(chute) {
     }
 
     else if (num > numeroSecreto) {
-        elementoChute.innerHTML += '<div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>'
+        elementoChute.innerHTML += `<div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>`
     }
 
     else {
-        elementoChute.innerHTML += ' <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>'
+        elementoChute.innerHTML += ` <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>`
     }
 }
 
